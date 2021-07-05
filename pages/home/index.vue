@@ -4,7 +4,7 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<u-tabbar :list="tabbar" :mid-button="true"></u-tabbar>
+		<u-tabbar :list="tabbar" :mid-button="true" :active-color="'#303133'" :inactive-color="'#606266'"></u-tabbar>
 	</view>
 </template>
 
