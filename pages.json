@@ -45,22 +45,13 @@
   		"backgroundColor": "#FFFFFF",
   		"borderStyle": "black",
   		"list": [{
-  			"pagePath": "pages/home/index",
-  			"iconPath": "static/uview/example/component.png",
-  			"selectedIconPath": "static/uview/example/component_select.png",
-        "text": "首页"
+  			"pagePath": "pages/home/index"
   		},
       {
-      	"pagePath": "pages/publish/index",
-      	"iconPath": "static/uview/example/js.png",
-      	"selectedIconPath": "static/uview/example/js_select.png",
-      	"text": "发布"
+      	"pagePath": "pages/publish/index"
       },
       {
-  			"pagePath": "pages/my/index",
-  			"iconPath": "static/uview/example/template.png",
-  			"selectedIconPath": "static/uview/example/template_select.png",
-        "text": "个人中心"
+  			"pagePath": "pages/my/index"
   		}]
   	}
 }
