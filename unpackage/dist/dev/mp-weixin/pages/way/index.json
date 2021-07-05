@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "学习路线",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-tabbar": "/uview-ui/components/u-tabbar/u-tabbar"
+  }
+}

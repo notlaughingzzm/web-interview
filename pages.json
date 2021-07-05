@@ -21,18 +21,32 @@
          "navigationBarTitleText": "发布",
           "enablePullDownRefresh": false
         }   
-      },
-     {
+      }, 
+      {
        "path" : "pages/my/index",
        "style" :{
          "navigationBarTitleText": "个人中心",
           "enablePullDownRefresh": false
         }   
-      }
+      },
+      {
+        "path" : "pages/message/index",
+         "style" : {
+          "navigationBarTitleText": "消息",
+           "enablePullDownRefresh": false
+         }
+       },
+       {
+         "path" : "pages/way/index",
+          "style" : {
+           "navigationBarTitleText": "学习路线",
+           "enablePullDownRefresh": false
+          }  
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "web_interview",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
@@ -44,11 +58,18 @@
   		"selectedColor": "#303133",
   		"backgroundColor": "#FFFFFF",
   		"borderStyle": "black",
-  		"list": [{
+  		"list": [
+      {
   			"pagePath": "pages/home/index"
   		},
       {
+      	"pagePath": "pages/message/index"
+      },
+      {
       	"pagePath": "pages/publish/index"
+      },
+      {
+      	"pagePath": "pages/way/index"
       },
       {
   			"pagePath": "pages/my/index"
