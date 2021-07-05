@@ -10586,6 +10586,90 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   sticky: 970,
   indexListSticky: 965 };exports.default = _default;
 
+/***/ }),
+/* 40 */
+/*!***********************************************************************************************************************************!*\
+  !*** C:/Users/hs-czl/Documents/HBuilderProjects/web_interview/node_modules/@escook/request-miniprogram/miniprogram_dist/index.js ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.$http = void 0;function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}var Request = /*#__PURE__*/function () {
+  function Request() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};_classCallCheck(this, Request);
+    // 请求的根路径
+    this.baseUrl = options.baseUrl || '';
+    // 请求的 url 地址
+    this.url = options.url || '';
+    // 请求方式
+    this.method = 'GET';
+    // 请求的参数对象
+    this.data = null;
+    // header 请求头
+    this.header = options.header || {};
+    this.beforeRequest = null;
+    this.afterRequest = null;
+  }_createClass(Request, [{ key: "get", value: function get(
+
+    url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      this.method = 'GET';
+      this.url = this.baseUrl + url;
+      this.data = data;
+      return this._();
+    } }, { key: "post", value: function post(
+
+    url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      this.method = 'POST';
+      this.url = this.baseUrl + url;
+      this.data = data;
+      return this._();
+    } }, { key: "put", value: function put(
+
+    url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      this.method = 'PUT';
+      this.url = this.baseUrl + url;
+      this.data = data;
+      return this._();
+    } }, { key: "delete", value: function _delete(
+
+    url) {var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      this.method = 'DELETE';
+      this.url = this.baseUrl + url;
+      this.data = data;
+      return this._();
+    } }, { key: "_", value: function _()
+
+    {var _this = this;
+      // 清空 header 对象
+      this.header = {};
+      // 请求之前做一些事
+      this.beforeRequest && typeof this.beforeRequest === 'function' && this.beforeRequest(this);
+      // 发起请求
+      return new Promise(function (resolve, reject) {
+        var weixin = wx;
+        // 适配 uniapp
+        if ('undefined' !== typeof uni) {
+          weixin = uni;
+        }
+        weixin.request({
+          url: _this.url,
+          method: _this.method,
+          data: _this.data,
+          header: _this.header,
+          success: function success(res) {resolve(res);},
+          fail: function fail(err) {reject(err);},
+          complete: function complete(res) {
+            // 请求完成以后做一些事情
+            _this.afterRequest && typeof _this.afterRequest === 'function' && _this.afterRequest(res);
+          } });
+
+      });
+    } }]);return Request;}();
+
+
+var $http = new Request();exports.$http = $http;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
 /***/ })
 ]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map
