@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/my/my"
+    "pages/home/index",
+    "pages/utils/index",
+    "pages/my/index"
   ],
   "subPackages": [],
   "window": {
@@ -11,22 +12,28 @@
     "backgroundColor": "#F8F8F8"
   },
   "tabBar": {
-    "color": "#919293",
-    "selectedColor": "#97AF13",
-    "backgroundColor": "#fff",
+    "color": "#909399",
+    "selectedColor": "#303133",
+    "backgroundColor": "#FFFFFF",
     "borderStyle": "black",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "static/images/tabBar/index.png",
-        "selectedIconPath": "static/images/tabBar/index_selected.png"
+        "pagePath": "pages/home/index",
+        "iconPath": "static/uview/example/component.png",
+        "selectedIconPath": "static/uview/example/component_select.png",
+        "text": "首页"
       },
       {
-        "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "static/images/tabBar/mine.png",
-        "selectedIconPath": "static/images/tabBar/mine_selected.png"
+        "pagePath": "pages/utils/index",
+        "iconPath": "static/uview/example/js.png",
+        "selectedIconPath": "static/uview/example/js_select.png",
+        "text": "工具"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "static/uview/example/template.png",
+        "selectedIconPath": "static/uview/example/template_select.png",
+        "text": "我的"
       }
     ]
   },
