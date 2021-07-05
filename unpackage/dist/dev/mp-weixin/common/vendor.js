@@ -10597,7 +10597,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 19));var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 41));
-var _api = _interopRequireDefault(__webpack_require__(/*! @/api */ 42));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+var _api = _interopRequireDefault(__webpack_require__(/*! @/api */ 42));
+var _tabBar = _interopRequireDefault(__webpack_require__(/*! @/utils/tabBar.js */ 98));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
 
 _vue.default.use(_vuex.default);
 
@@ -10605,32 +10606,7 @@ var store = new _vuex.default.Store({
   state: {
     store: {},
     member: {}, //成员信息
-    tabList: [{ //tabBarList
-      iconPath: "/static/uview/example/component.png",
-      selectedIconPath: "/static/uview/example/component_select.png",
-      text: '首页',
-      count: 2,
-      isDot: true,
-      pagePath: "/pages/home/index",
-      customIcon: false },
-
-    {
-      iconPath: "/static/uview/example/js.png",
-      selectedIconPath: "/static/uview/example/js_select.png",
-      text: '发布',
-      midButton: true,
-      pagePath: "/pages/publish/index",
-      customIcon: false }, _defineProperty({
-
-
-      iconPath: "account",
-      selectedIconPath: "account-fill",
-      text: '我的',
-      customIcon: false,
-      pagePath: "/pages/my/index" }, "customIcon",
-    false)] },
-
-
+    tabList: _tabBar.default },
 
   getters: {
     isLogin: function isLogin(state) {return Object.keys(state.member).length > 0;} //是否登录
@@ -10644,7 +10620,7 @@ var store = new _vuex.default.Store({
     } },
 
   actions: {
-    getStore: function getStore(_ref2) {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var commit, store;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:commit = _ref2.commit;_context.next = 3;return (
+    getStore: function getStore(_ref) {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var commit, store;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:commit = _ref.commit;_context.next = 3;return (
                   (0, _api.default)('store'));case 3:store = _context.sent;
                 commit('SET_STORE', store);case 5:case "end":return _context.stop();}}}, _callee);}))();
     } } });var _default =
@@ -11970,6 +11946,98 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 var $http = new Request();exports.$http = $http;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */
+/*!********************************************************************************!*\
+  !*** C:/Users/hs-czl/Documents/HBuilderProjects/web_interview/utils/tabBar.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var list = [{
+  iconPath: "/static/uview/example/component.png",
+  selectedIconPath: "/static/uview/example/component_select.png", // 激活(选中)的图标，同上
+  text: '首页', // 显示的提示文字
+  count: 2, // 红色角标显示的数字，如果需要移除角标，配置此参数为0即可
+  isDot: true, // 如果配置此值为true，那么角标将会以红点的形式显示
+  pagePath: "/pages/home/index", // 点击某一个item时，跳转的路径，此路径必须是pagees.json中tabBar字段中定义的路径
+  customIcon: false, // 如果使用自定义扩展的图标库字体，需配置此值为true
+  // 自定义字体图标库教程：https://www.uviewui.com/guide/customIcon.html
+  midButton: false // 如果是凸起按钮项，需配置此值为true
+},
+{
+  iconPath: "/static/uview/example/js.png",
+  selectedIconPath: "/static/uview/example/js_select.png",
+  text: '发布',
+  midButton: true,
+  pagePath: "/pages/publish/index",
+  customIcon: false }, _defineProperty({
+
+
+  iconPath: "account",
+  selectedIconPath: "account-fill",
+  text: '我的',
+  customIcon: false,
+  pagePath: "/pages/my/index" }, "customIcon",
+false)];var _default =
+
+
+
+list;exports.default = _default;
 
 /***/ })
 ]]);
