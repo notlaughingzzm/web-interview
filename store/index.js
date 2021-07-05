@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import api from '@/api'
 import list from '@/utils/tabBar.js'
+import homeData from '@/api/home.js'
 
 Vue.use(Vuex)
 
@@ -9,7 +10,8 @@ const store = new Vuex.Store({
 	state: {
 		store: {},
 		member: {}, //成员信息
-    tabList:list
+    tabList:list,
+    homeData:homeData
 	},
 	getters: {
 		isLogin: state => Object.keys(state.member).length > 0	//是否登录

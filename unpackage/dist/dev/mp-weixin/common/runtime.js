@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"uview-ui/components/u-tabbar/u-tabbar":1,"uview-ui/components/u-badge/u-badge":1,"uview-ui/components/u-icon/u-icon":1};
+/******/ 		var cssChunks = {"uview-ui/components/u-tabbar/u-tabbar":1,"uview-ui/components/u-grid-item/u-grid-item":1,"uview-ui/components/u-grid/u-grid":1,"uview-ui/components/u-icon/u-icon":1,"uview-ui/components/u-notice-bar/u-notice-bar":1,"uview-ui/components/u-search/u-search":1,"uview-ui/components/u-swiper/u-swiper":1,"uview-ui/components/u-badge/u-badge":1,"uview-ui/components/u-column-notice/u-column-notice":1,"uview-ui/components/u-row-notice/u-row-notice":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"uview-ui/components/u-tabbar/u-tabbar":"uview-ui/components/u-tabbar/u-tabbar","uview-ui/components/u-badge/u-badge":"uview-ui/components/u-badge/u-badge","uview-ui/components/u-icon/u-icon":"uview-ui/components/u-icon/u-icon"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"uview-ui/components/u-tabbar/u-tabbar":"uview-ui/components/u-tabbar/u-tabbar","uview-ui/components/u-grid-item/u-grid-item":"uview-ui/components/u-grid-item/u-grid-item","uview-ui/components/u-grid/u-grid":"uview-ui/components/u-grid/u-grid","uview-ui/components/u-icon/u-icon":"uview-ui/components/u-icon/u-icon","uview-ui/components/u-notice-bar/u-notice-bar":"uview-ui/components/u-notice-bar/u-notice-bar","uview-ui/components/u-search/u-search":"uview-ui/components/u-search/u-search","uview-ui/components/u-swiper/u-swiper":"uview-ui/components/u-swiper/u-swiper","uview-ui/components/u-badge/u-badge":"uview-ui/components/u-badge/u-badge","uview-ui/components/u-column-notice/u-column-notice":"uview-ui/components/u-column-notice/u-column-notice","uview-ui/components/u-row-notice/u-row-notice":"uview-ui/components/u-row-notice/u-row-notice"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
