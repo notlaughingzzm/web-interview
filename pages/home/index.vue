@@ -4,7 +4,12 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<u-tabbar :list="tabbar" :mid-button="true" :active-color="'#303133'" :inactive-color="'#606266'"></u-tabbar>
+		<u-tabbar
+     :list="tabbar" 
+     :mid-button="true" 
+     :active-color="activeColor"
+     :inactive-color="inactiveColor"
+     ></u-tabbar>
 	</view>
 </template>
 
@@ -13,6 +18,8 @@
 		data() {
 			return {
 				title: 'Web Interview',
+        inactiveColor: '#909399',
+        activeColor: '#5098FF',
 				tabbar:this.$store.state.tabList
 			}
 		},
