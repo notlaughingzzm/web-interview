@@ -16,16 +16,16 @@
        }   
      },
      {
-       "path" : "pages/utils/index",
+       "path" : "pages/publish/index",
        "style" :{
-         "navigationBarTitleText": "工具",
+         "navigationBarTitleText": "发布",
           "enablePullDownRefresh": false
         }   
       },
      {
        "path" : "pages/my/index",
        "style" :{
-         "navigationBarTitleText": "我的",
+         "navigationBarTitleText": "个人中心",
           "enablePullDownRefresh": false
         }   
       }
@@ -51,16 +51,16 @@
         "text": "首页"
   		},
       {
-      	"pagePath": "pages/utils/index",
+      	"pagePath": "pages/publish/index",
       	"iconPath": "static/uview/example/js.png",
       	"selectedIconPath": "static/uview/example/js_select.png",
-      	"text": "工具"
+      	"text": "发布"
       },
       {
   			"pagePath": "pages/my/index",
   			"iconPath": "static/uview/example/template.png",
   			"selectedIconPath": "static/uview/example/template_select.png",
-        "text": "我的"
+        "text": "个人中心"
   		}]
   	}
 }

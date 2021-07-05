@@ -13,35 +13,14 @@
 		data() {
 			return {
 				title: 'Web Interview',
-				tabbar: ''
+				tabbar:this.$store.state.tabList
 			}
 		},
 		onLoad() {
 			/**
 			 * 示例中为每个tabbar页面都写了一遍tabbar变量，您可以将tabbar数组写入到vuex中，这样可以全局引用
 			 */
-			this.tabbar = [{
-					iconPath: "/static/uview/example/component.png",
-					selectedIconPath: "/static/uview/example/component_select.png",
-					text: '组件',
-					count: 2,
-					isDot: true,
-					pagePath: "/pages/home/index"
-				},
-				{
-					iconPath: "/static/uview/example/js.png",
-					selectedIconPath: "/static/uview/example/js_select.png",
-					text: '工具',
-					midButton: true,
-					pagePath: "/pages/utils/index"
-				},
-				{
-					iconPath: "/static/uview/example/template.png",
-					selectedIconPath: "/static/uview/example/template_select.png",
-					text: '模板',
-					pagePath: "/pages/my/index"
-				},
-			]
+			// this.tabbar = this.$store.state.tabList
 		}
 	}
 </script>
