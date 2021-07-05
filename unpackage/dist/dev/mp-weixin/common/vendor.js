@@ -10598,7 +10598,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 19));var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 41));
 var _api = _interopRequireDefault(__webpack_require__(/*! @/api */ 42));
-var _tabBar = _interopRequireDefault(__webpack_require__(/*! @/utils/tabBar.js */ 45));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+var _tabBar = _interopRequireDefault(__webpack_require__(/*! @/utils/tabBar.js */ 45));
+var _home = _interopRequireDefault(__webpack_require__(/*! @/api/home.js */ 149));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
 
 _vue.default.use(_vuex.default);
 
@@ -10606,7 +10607,8 @@ var store = new _vuex.default.Store({
   state: {
     store: {},
     member: {}, //成员信息
-    tabList: _tabBar.default },
+    tabList: _tabBar.default,
+    homeData: _home.default },
 
   getters: {
     isLogin: function isLogin(state) {return Object.keys(state.member).length > 0;} //是否登录
@@ -12003,6 +12005,163 @@ list;exports.default = _default;
 
 var $http = new Request();exports.$http = $http;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */,
+/* 137 */,
+/* 138 */,
+/* 139 */,
+/* 140 */,
+/* 141 */,
+/* 142 */,
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */,
+/* 148 */,
+/* 149 */
+/*!************************************!*\
+  !*** E:/web_interview/api/home.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var homeData = {
+  swiperList: [{
+    image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+    title: '昨夜星辰昨夜风，画楼西畔桂堂东' },
+
+  {
+    image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
+    title: '身无彩凤双飞翼，心有灵犀一点通' },
+
+  {
+    image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
+    title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳' }],
+
+  gridList: [{
+    name: 'photo',
+    title: '图片' },
+
+  {
+    name: 'lock',
+    title: '锁头' },
+
+  {
+    name: 'hourglass',
+    title: '沙漏' },
+
+  {
+    name: 'integral',
+    title: '就这' },
+
+  {
+    name: 'kefu-ermai',
+    title: '客服' },
+
+  {
+    name: 'coupon',
+    title: '订单' }],
+
+  noticeList: [
+  '寒雨连江夜入吴',
+  '平明送客楚山孤',
+  '洛阳亲友如相问',
+  '一片冰心在玉壶'] };var _default =
+
+
+homeData;exports.default = _default;
 
 /***/ })
 ]]);
