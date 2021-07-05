@@ -4,7 +4,12 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<u-tabbar :list="tabbar" :mid-button="true"></u-tabbar>
+		<u-tabbar 
+    :list="tabbar" 
+    :mid-button="true"
+    :active-color="activeColor"
+    :inactive-color="inactiveColor"
+    ></u-tabbar>
 	</view>
 </template>
 
@@ -12,33 +17,13 @@
 	export default {
 		data() {
 			return {
-				title: '模板',
-				tabbar: ''
+				title: '个人中心',
+        inactiveColor: '#909399',
+        activeColor: '#5098FF',
+				tabbar: this.$store.state.tabList
 			}
 		},
 		onLoad() {
-			this.tabbar = [{
-					iconPath: "/static/uview/example/component.png",
-					selectedIconPath: "/static/uview/example/component_select.png",
-					text: '组件',
-					count: 2,
-					isDot: true,
-					pagePath: "/pages/home/index"
-				},
-				{
-					iconPath: "/static/uview/example/js.png",
-					selectedIconPath: "/static/uview/example/js_select.png",
-					text: '工具',
-					midButton: true,
-					pagePath: "/pages/utils/index"
-				},
-				{
-					iconPath: "/static/uview/example/template.png",
-					selectedIconPath: "/static/uview/example/template_select.png",
-					text: '模板',
-					pagePath: "/pages/my/index"
-				},
-			]
 		}
 	}
 </script>
