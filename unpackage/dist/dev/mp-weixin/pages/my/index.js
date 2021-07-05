@@ -163,11 +163,18 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
       title: '个人中心',
+      inactiveColor: '#909399',
+      activeColor: '#5098FF',
       tabbar: this.$store.state.tabList };
 
   },
