@@ -34,7 +34,19 @@ let homeData = {
                  {
                   name: 'coupon',
                   title: '订单'
-                 }],
+                 },
+                 {
+      						name: 'photo',
+      						title: '图片'
+      					},
+                {
+                  name: 'lock',
+                  title: '锁头'
+                 },
+                 {
+                  name: 'hourglass',
+                  title: '沙漏'
+                 },],
       noticeList:[
         '寒雨连江夜入吴',
         '平明送客楚山孤',
