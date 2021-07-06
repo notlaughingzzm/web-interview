@@ -21,8 +21,14 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
+<<<<<<< HEAD
     "useMultiFrameRuntime": false,
     "useApiHook": true,
+=======
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": false,
+>>>>>>> 9e288bf (<feat>暂存)
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -32,9 +38,17 @@
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
+<<<<<<< HEAD
     "packNpmManually": false,
     "packNpmRelationList": [],
     "minifyWXSS": true
+=======
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "bundle": false
+>>>>>>> 9e288bf (<feat>暂存)
   },
   "compileType": "miniprogram",
   "libVersion": "",
