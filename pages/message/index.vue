@@ -5,7 +5,7 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<u-tabbar
-     :list="tabbar" 
+     :list="tabList" 
      :mid-button="true" 
      :active-color="activeColor"
      :inactive-color="inactiveColor"
@@ -14,21 +14,20 @@
 </template>
 
 <script>
-	export default {
+import {mapGetters} from 'vuex'
+export default {
 		data() {
 			return {
 				title: 'Web Interview',
         inactiveColor: '#909399',
         activeColor: '#5098FF',
-				tabbar:this.$store.state.tabList
 			}
 		},
 		onLoad() {
-			/**
-			 * 示例中为每个tabbar页面都写了一遍tabbar变量，您可以将tabbar数组写入到vuex中，这样可以全局引用
-			 */
-			// this.tabbar = this.$store.state.tabList
-		}
+		},
+    computed:{
+      ...mapGetters(['tabList'])
+    }
 	}
 </script>
 

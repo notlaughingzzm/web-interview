@@ -12,13 +12,13 @@
     </view>
     <view class="content__swiper">
       <u-swiper 
-      :list="swiperList"
+      :list="homeData.swiperList"
       :effect3d="true"
        >
       </u-swiper>
     </view>
     <view class="content__notice">
-      <u-notice-bar type="primary" mode="horizontal" :list="noticeList"></u-notice-bar>
+      <u-notice-bar type="primary" mode="horizontal" :list="homeData.noticeList"></u-notice-bar>
     </view>
     <view class="content__card">
       <u-card :title="title" :sub-title="subTitle" :thumb="thumb">
@@ -33,44 +33,40 @@
     </view>
     <view class="content__grid">
       <u-grid :col="3">
-      		<u-grid-item v-for="(item,index) in gridList" :key="index">
+      		<u-grid-item v-for="(item,index) in homeData.gridList" :key="index">
       			<u-icon :name="item.name" :size="46"></u-icon>
       			<view class="grid-text">{{item.title}}</view>
       		</u-grid-item>
       	</u-grid>
     </view>
-    
 		<u-tabbar
-     :list="tabbar" 
+     :list="tabList" 
      :mid-button="true" 
      :active-color="activeColor"
      :inactive-color="inactiveColor">
      </u-tabbar>
-     
-    
 	</view>
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
 	export default {
 		data() {
 			return {
 				title: 'Web Interview',
         inactiveColor: '#909399',
         activeColor: '#5098FF',
-				tabbar:this.$store.state.tabList,
         keyword: '面试题搜索',
-        swiperList:this.$store.state.homeData.swiperList,
-        gridList:this.$store.state.homeData.gridList,
-        noticeList:this.$store.state.homeData.noticeList,
         title: '素胚勾勒出青花，笔锋浓转淡',
         subTitle: '2020-05-15',
         thumb: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/hpic2119_s.jpg',
 			}
 		},
 		onLoad() {
-			
-		}
+		},
+    computed:{
+      ...mapGetters(['tabList','homeData'])
+    }
 	}
 </script>
 

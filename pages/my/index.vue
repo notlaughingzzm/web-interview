@@ -5,7 +5,7 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<u-tabbar 
-    :list="tabbar" 
+    :list="tabList" 
     :mid-button="true"
     :active-color="activeColor"
     :inactive-color="inactiveColor"
@@ -14,17 +14,20 @@
 </template>
 
 <script>
-	export default {
+import {mapGetters} from 'vuex'
+export default {
 		data() {
 			return {
 				title: '个人中心',
         inactiveColor: '#909399',
         activeColor: '#5098FF',
-				tabbar: this.$store.state.tabList
 			}
 		},
 		onLoad() {
-		}
+		},
+    computed:{
+      ...mapGetters(['tabList'])
+    }
 	}
 </script>
 
