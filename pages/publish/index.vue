@@ -4,20 +4,23 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
-		<u-tabbar :list="tabbar" :mid-button="true"></u-tabbar>
+		<u-tabbar :list="tabList" :mid-button="true"></u-tabbar>
 	</view>
 </template>
 
 <script>
-	export default {
+import {mapGetters} from 'vuex'
+export default {
 		data() {
 			return {
 				title: '发布',
-				tabbar: this.$store.state.tabList
 			}
 		},
 		onLoad() {
-		}
+		},
+    computed:{
+      ...mapGetters(['tabList'])
+    }
 	}
 </script>
 

@@ -1,4 +1,4 @@
- let list =[{  
+ let tabBarList =[{  
 					iconPath: "home",
 					selectedIconPath: "home-fill", // 激活(选中)的图标，同上
 					text: '首页', // 显示的提示文字
@@ -44,4 +44,4 @@
 				},
 			]
  
-export default list
+export default tabBarList
